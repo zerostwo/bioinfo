@@ -1,0 +1,18 @@
+---
+title: "GEO"
+author: "duansq"
+date: "2020/4/13"
+output: html_document
+---
+# 下载表达矩阵
+```{r}
+options(stringsAsFactors = F)##避免将character转换为因子
+library(GEOquery)
+gse <- getGEO("GSE7765", GSEMatrix = TRUE)
+```
+# 查看表达信息
+```{r}
+class(gse)
+str(gse)
+```
+
